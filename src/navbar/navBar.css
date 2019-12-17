@@ -1,0 +1,42 @@
+nav {
+  display: flex;
+  height: 120px;
+  width: 100%;
+  align-items: center;
+  font-weight: bold;
+}
+
+.nav-items {
+  width: 800px;
+  margin-left: 70px;
+  padding: 5px;
+}
+
+.nav-items > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.nav-items > ul > li {
+  position: relative;
+}
+
+.nav-logo {
+  width: 278px;
+  height: 108px;
+  object-fit: contain;
+  margin-left: 85px;
+}
+
+.highlight::before {
+  content: "";
+  background-color: #7de634;
+  height: 46px;
+  width: 130%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: -1;
+}
