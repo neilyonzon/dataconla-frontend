@@ -2,8 +2,9 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import NavBar from "./navbar/navbar";
-import Headline from "./components/headliner";
-import Stats from "./components/stats";
+import Headline from "./components/Headliner";
+import Stats from "./components/Stats";
+import CTABox from "./components/CTABox";
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
       <div className="section">
         <div className="row">
           <div className="col-2">
-            <Headline text="Data Con LA is the largest, of its kind, data conference in Southern California."></Headline>
+            <Headline
+              color="text-primary"
+              text="Data Con LA is the largest, of its kind, data conference in Southern California."
+            ></Headline>
           </div>
           <div className="col-2">
             <p>
@@ -33,7 +37,34 @@ function App() {
             </p>
           </div>
         </div>
-        <Stats></Stats>
+        <Stats
+          color="text-tertiary"
+          stats={[
+            { text: "participants", number: 2000 },
+            { text: "speakers", number: 43 }
+          ]}
+        ></Stats>
+        <div className="row">
+          <div className="col-2">
+            <p>Our 2020 session tracks will include</p>
+            <ul className="sub-header list-no-style text-secondary">
+              <li>Data</li>
+              <li>AI/ ML/ Data Science</li>
+              <li>Emerging Tech</li>
+              <li>Visualizations/ UI/ Use Cases</li>
+              <li>Infrastructure &amp; Security</li>
+            </ul>
+          </div>
+          <div className="col-2">
+            <CTABox
+              data={{
+                header: "CALL FOR PROPOSALS",
+                cta: "SUBMIT PROPOSALS",
+                color: "text-secondary"
+              }}
+            ></CTABox>
+          </div>
+        </div>
       </div>
     </div>
   );
