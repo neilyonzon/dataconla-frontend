@@ -5,6 +5,7 @@ import NavBar from "./navbar/navbar";
 import Headline from "./components/Headliner";
 import Stats from "./components/Stats";
 import CTABox from "./components/CTABox";
+import BannerHP from "./components/Banner-HP";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <header>
         <NavBar></NavBar>
       </header>
+      <BannerHP></BannerHP>
       <div className="section">
         <div className="row">
           <div className="col-2">
@@ -62,6 +64,13 @@ function App() {
                 cta: "SUBMIT PROPOSALS",
                 color: "text-secondary"
               }}
+              text={[
+                "Interested in speaking at DataCon 2020?",
+                <br />,
+                "Send us your proposal before",
+                <br />,
+                "January 6, 2020."
+              ]}
             ></CTABox>
           </div>
         </div>
