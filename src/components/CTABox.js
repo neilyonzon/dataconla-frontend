@@ -5,8 +5,8 @@ function ctaBox(props) {
     <div className={"cta-box center " + props.data.color}>
       <h3 className="small-header">{props.data.header}</h3>
       <p>{props.text}</p>
-      <a href="#" className="btn btn-secondary">
-        Hi
+      <a href={props.data.link} className={"btn " + props.data.button}>
+        {props.data.cta}
       </a>
     </div>
   );

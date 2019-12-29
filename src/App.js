@@ -5,7 +5,8 @@ import NavBar from "./navbar/navbar";
 import Headline from "./components/Headliner";
 import Stats from "./components/Stats";
 import CTABox from "./components/CTABox";
-import BannerHP from "./components/Banner-HP";
+import BannerHP from "./components/BannerHp";
+import BannerMedia from "./components/BannerMedia";
 
 function App() {
   return (
@@ -13,7 +14,17 @@ function App() {
       <header>
         <NavBar></NavBar>
       </header>
-      <BannerHP></BannerHP>
+      <BannerHP
+        data={{
+          image: "/Los_Angeles.png",
+          logo: {
+            src:
+              "https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png",
+            alt: "Data Con Logo"
+          },
+          text: "University of Southern California, Los Angeles • March 6, 2020"
+        }}
+      ></BannerHP>
       <div className="section">
         <div className="row">
           <div className="col-2">
@@ -61,7 +72,9 @@ function App() {
             <CTABox
               data={{
                 header: "CALL FOR PROPOSALS",
-                cta: "SUBMIT PROPOSALS",
+                cta: "SUBMIT PROPOSAL",
+                link: "#",
+                button: "btn-secondary",
                 color: "text-secondary"
               }}
               text={[
@@ -72,6 +85,38 @@ function App() {
                 "January 6, 2020."
               ]}
             ></CTABox>
+          </div>
+        </div>
+      </div>
+      <BannerMedia></BannerMedia>
+      <div className="section">
+        <div className="row">
+          <div className="col-2">
+            <CTABox
+              data={{
+                header: "SPONSOR INQUIRY",
+                cta: "SUBMIT PROPOSAL",
+                link: "#",
+                button: "btn-primary",
+                color: "text-primary"
+              }}
+              text={[
+                "If you wish to sponsor Data Con 2020 click",
+                <br />,
+                "here to request a sponsor pack."
+              ]}
+            ></CTABox>
+          </div>
+          <div className="col-2">
+            {" "}
+            <p>Our 2020 session tracks will include</p>
+            <ul className="sub-header list-no-style text-secondary">
+              <li>Data</li>
+              <li>AI/ ML/ Data Science</li>
+              <li>Emerging Tech</li>
+              <li>Visualizations/ UI/ Use Cases</li>
+              <li>Infrastructure &amp; Security</li>
+            </ul>
           </div>
         </div>
       </div>

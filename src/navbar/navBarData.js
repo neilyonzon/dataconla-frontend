@@ -1,1 +1,1 @@
-export const navBarList = ["wi", "hwdey"];
+export const navBarList = ["wi", "Conference"];
