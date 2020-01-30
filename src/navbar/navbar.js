@@ -9,11 +9,11 @@ function navBar(props) {
   };
 
   const handleOver = e => {
-    e.target.className = "green";
+    e.currentTarget.className = "subnav-display";
   };
 
   const handleLeave = e => {
-    e.target.className = "";
+    e.currentTarget.className = "";
   };
 
   return (
@@ -24,9 +24,9 @@ function navBar(props) {
       ></img>
       <div className="nav-items">
         <ul>
-          <li>
-            {navRender(navBarList[1])}
-            <ul>
+          <li onMouseEnter={handleOver} onMouseOut={handleLeave}>
+            <a href="#">Conference</a>
+            <ul class="sublist">
               <li>
                 <a href="#">Venue</a>
               </li>
@@ -43,7 +43,7 @@ function navBar(props) {
           </li>
           <li onMouseEnter={handleOver} onMouseOut={handleLeave}>
             <a href="#">Agenda</a>
-            <ul>
+            <ul class="sublist">
               <li>
                 <a href="#">Venue</a>
               </li>

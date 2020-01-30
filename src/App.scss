@@ -1,3 +1,5 @@
+@import "node_modules/react-modal-video/scss/modal-video.scss";
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
@@ -193,11 +195,19 @@
 .banner-media {
   width: 100%;
   height: 535px;
-  padding: 30px 0px 0px 120px;
+  padding: 30px 0px 0px 0px;
   color: white;
   font-weight: bold;
   position: relative;
   background-size: cover;
+}
+
+.banner-media > * {
+  padding-left: 50px;
+}
+
+.play-button {
+  cursor: pointer;
 }
 
 .banner-media > p:nth-child(1) {

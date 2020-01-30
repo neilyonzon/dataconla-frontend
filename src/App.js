@@ -1,12 +1,12 @@
 import React from "react";
 import logo from "./logo.svg";
-import "./App.css";
 import NavBar from "./navbar/navbar";
 import Headline from "./components/Headliner";
 import Stats from "./components/Stats";
 import CTABox from "./components/CTABox";
 import BannerHP from "./components/BannerHp";
 import BannerMedia from "./components/BannerMedia";
+import "./App.scss";
 
 function App() {
   return (

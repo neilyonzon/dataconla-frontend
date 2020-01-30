@@ -4,6 +4,8 @@ nav {
   width: 100%;
   align-items: center;
   font-weight: bold;
+  z-index: 99999;
+  position: relative;
 }
 
 .nav-items {
@@ -12,22 +14,47 @@ nav {
   padding: 5px;
 }
 
-.nav-items > ul {
+.nav-items ul {
   display: flex;
   list-style: none;
   justify-content: space-between;
+  position: relative;
 }
 
 .nav-items > ul ul {
   display: none;
+  background: #ffa800;
+  position: absolute;
 }
 
 .nav-items > ul > li {
   position: relative;
 }
 
-.green {
-  color: green;
+.nav-items > ul > li > a {
+  height: 30px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-items a:hover {
+  color: #a452ff;
+}
+
+.subnav-display > ul.sublist,
+.sublist:hover {
+  display: block;
+}
+
+.sublist {
+  padding: 10px;
+}
+
+.sublist > li {
+  padding: 0px 10px 10px 0px;
 }
 
 .nav-logo {
