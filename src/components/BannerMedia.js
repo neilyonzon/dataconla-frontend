@@ -15,12 +15,14 @@ class BannerMedia extends React.Component {
   render() {
     return (
       <div>
-        <ModalVideo
-          channel="youtube"
-          isOpen={this.state.isOpen}
-          videoId="L61p2uyiMSo"
-          onClose={() => this.setState({ isOpen: false })}
-        />
+        {/* <div className="video">
+          <ModalVideo
+            channel="youtube"
+            isOpen={this.state.isOpen}
+            videoId="L61p2uyiMSo"
+            onClose={() => this.setState({ isOpen: false })}
+          />
+        </div> */}
         <div
           className="banner-media"
           style={{ backgroundImage: `url('/blue_meeting.png')` }}

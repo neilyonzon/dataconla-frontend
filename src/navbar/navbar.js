@@ -20,7 +20,7 @@ function navBar(props) {
   return (
     <nav>
       <img className="nav-logo" src="/logo2.jpg"></img>
-      <div className="nav-items display">
+      <div className="nav-items">
         <ul>
           <li onMouseEnter={handleOver} onMouseOut={handleLeave}>
             <a href="#">Conference</a>
