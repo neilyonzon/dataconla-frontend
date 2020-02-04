@@ -1,6 +1,7 @@
 import React from "react";
 import "./navBar.css";
 import { navBarList } from "./navBarData.js";
+import { Link } from "react-router-dom";
 
 function navBar(props) {
   const navRender = data => {
@@ -18,11 +19,8 @@ function navBar(props) {
 
   return (
     <nav>
-      <img
-        className="nav-logo"
-        src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png"
-      ></img>
-      <div className="nav-items">
+      <img className="nav-logo" src="/logo2.jpg"></img>
+      <div className="nav-items display">
         <ul>
           <li onMouseEnter={handleOver} onMouseOut={handleLeave}>
             <a href="#">Conference</a>
@@ -59,7 +57,7 @@ function navBar(props) {
             </ul>
           </li>
           <li>
-            <a href="#">Speakers</a>
+            <Link to="/speakers">Speakers</Link>
           </li>
           <li>Sponsors</li>
           <li>Panels</li>

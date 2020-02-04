@@ -233,3 +233,75 @@
   border: 5px solid #ffffff;
   height: 0px;
 }
+
+/* Countdown */
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.countdown > h1 {
+  font-size: 52px;
+}
+
+.countdown-values {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: relative;
+}
+
+.countdown-num {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.countdown-values > p {
+  font-size: 32px;
+  margin-top: 7px;
+  position: relative;
+  top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.countdown > p:nth-of-type(1) {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.countdown > p:nth-of-type(2) {
+  font-size: 52px;
+  padding: 0px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.v-line {
+  border-left: 4px solid black;
+  height: 70%;
+}
+
+.countdown-values > div,
+.countdown-values > * > p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 992px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-2 {
+    width: 100%;
+  }
+}
