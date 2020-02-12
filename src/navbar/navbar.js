@@ -19,11 +19,19 @@ function navBar(props) {
 
   return (
     <nav>
+      <div className="hamburger-menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <img className="nav-logo" src="/logo2.jpg"></img>
-      <div className="nav-items">
+      <div className="nav-items display">
         <ul>
           <li onMouseEnter={handleOver} onMouseOut={handleLeave}>
-            <a href="#">Conference</a>
+            <a href="#">
+              <em class="fas fa-ticket-alt"></em>Conference
+            </a>
+            <div className="mobile-line"></div>
             <ul class="sublist">
               <li>
                 <a href="#">Venue</a>
@@ -41,6 +49,7 @@ function navBar(props) {
           </li>
           <li onMouseEnter={handleOver} onMouseOut={handleLeave}>
             <a href="#">Agenda</a>
+            <div className="mobile-line"></div>
             <ul class="sublist">
               <li>
                 <a href="#">Venue</a>
@@ -60,6 +69,7 @@ function navBar(props) {
             <Link to="/speakers">Speakers</Link>
           </li>
           <li>Sponsors</li>
+
           <li>Panels</li>
           <li>Startup Showcase</li>
           <li className="highlight">Get Tickets</li>

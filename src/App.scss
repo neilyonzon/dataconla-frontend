@@ -322,6 +322,14 @@
 }
 
 @media only screen and (max-width: 700px) {
+  .banner-hp > img {
+    width: 100%;
+  }
+
+  .banner-hp > p {
+    font-size: 20px;
+  }
+
   .cta-box {
     overflow: hidden;
     padding-top: 400px / 500px * 100%;
@@ -371,5 +379,59 @@
 
   .video > * {
     max-width: 100%;
+  }
+
+  /*  Banner Media */
+
+  .banner-media {
+    height: 500px;
+    padding: unset;
+  }
+
+  .banner-media > * {
+    padding-left: 15px;
+  }
+
+  .banner-media > h1 {
+    font-size: 50px;
+    position: relative;
+    top: 10%;
+    transform: translateY(-10%);
+  }
+
+  .banner-media > div:nth-of-type(1) {
+    position: relative;
+    top: 5%;
+    font-size: 20px;
+  }
+
+  .banner-media > div:nth-of-type(1) > hr {
+    width: 60%;
+    float: left;
+    border: 5px solid #ffffff;
+    height: 0px;
+  }
+
+  /* Countdown */
+
+  .countdown > h1 {
+    font-size: 52px;
+  }
+
+  .countdown-values {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .countdown-num {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .countdown-values > p {
+    padding-left: unset;
+    padding-right: unset;
   }
 }
