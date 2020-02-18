@@ -2,6 +2,7 @@ import React from "react";
 import "./navBar.css";
 import { navBarList } from "./navBarData.js";
 import { Link } from "react-router-dom";
+import FontAwesome from "react-fontawesome";
 
 function navBar(props) {
   const navRender = data => {
@@ -17,6 +18,15 @@ function navBar(props) {
     e.currentTarget.className = "";
   };
 
+  const handleClick = e => {
+    e.preventDefault();
+    let sublist = e.currentTarget.getElementsByTagName("ul")[0];
+
+    sublist.className == "sublist collapse"
+      ? (sublist.className = "sublist")
+      : (sublist.className = "sublist collapse");
+  };
+
   return (
     <nav>
       <div className="hamburger-menu">
@@ -27,12 +37,17 @@ function navBar(props) {
       <img className="nav-logo" src="/logo2.jpg"></img>
       <div className="nav-items display">
         <ul>
-          <li onMouseEnter={handleOver} onMouseOut={handleLeave}>
+          <li
+            onMouseEnter={handleOver}
+            onMouseOut={handleLeave}
+            onClick={handleClick}
+          >
             <a href="#">
-              <em class="fas fa-ticket-alt"></em>Conference
+              <FontAwesome name="ticket" />
+              Conference
             </a>
             <div className="mobile-line"></div>
-            <ul class="sublist">
+            <ul className="sublist">
               <li>
                 <a href="#">Venue</a>
               </li>
@@ -48,9 +63,13 @@ function navBar(props) {
             </ul>
           </li>
           <li onMouseEnter={handleOver} onMouseOut={handleLeave}>
-            <a href="#">Agenda</a>
+            <a href="#">
+              {" "}
+              <FontAwesome name="ticket" />
+              Agenda
+            </a>
             <div className="mobile-line"></div>
-            <ul class="sublist">
+            <ul className="sublist">
               <li>
                 <a href="#">Venue</a>
               </li>
@@ -66,13 +85,39 @@ function navBar(props) {
             </ul>
           </li>
           <li>
-            <Link to="/speakers">Speakers</Link>
+            <span class="nav-title">
+              <Link to="/speakers">
+                {" "}
+                <FontAwesome name="ticket" />
+                Speakers
+              </Link>
+            </span>
+            <div className="mobile-line"></div>
           </li>
-          <li>Sponsors</li>
+          <li>
+            <span class="nav-title">
+              <Link to="/speakers">
+                <FontAwesome name="fa handshake" />
+                Sponsors
+              </Link>
+            </span>
+            <div className="mobile-line"></div>
+          </li>
 
-          <li>Panels</li>
-          <li>Startup Showcase</li>
-          <li className="highlight">Get Tickets</li>
+          <li>
+            <span class="nav-title">
+              <FontAwesome name="ticket" />
+              <Link to="startup-showcase">Startup Showcase</Link>
+            </span>
+            <div className="mobile-line"></div>
+          </li>
+          <li className="highlight">
+            <span class="nav-title">
+              <FontAwesome name="ticket" />
+              <Link>Get Tickets</Link>
+            </span>
+            <div className="mobile-line"></div>
+          </li>
         </ul>
       </div>
     </nav>
