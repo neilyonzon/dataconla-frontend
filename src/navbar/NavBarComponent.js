@@ -4,21 +4,25 @@ import { navBarList } from "./navBarData.js";
 import { Link } from "react-router-dom";
 import FontAwesome from "react-fontawesome";
 
-function navBar(props) {
-  const navRender = data => {
+class NavBarComponent extends React.Component {
+    state = {
+        mobileNav: "hidden"
+    }
+
+  navRender = data => {
     let data2 = <a href="#">{data}</a>;
-    return data2; 
+    return data2;
   };
 
-  const handleOver = e => {
+   handleOver = e => {
     e.currentTarget.className = "subnav-display";
   };
 
-  const handleLeave = e => {
+   handleLeave = e => {
     e.currentTarget.className = "";
   };
 
-  const handleClick = e => {
+   handleClick = e => {
     e.preventDefault();
     let sublist = e.currentTarget.getElementsByTagName("ul")[0];
     sublist.className == "sublist uncollapse"
@@ -26,22 +30,30 @@ function navBar(props) {
       : (sublist.className = "sublist uncollapse");
   };
 
+  handleMobileNav = e => {
+    e.preventDefault();
+    
+    this.setState(
+        {mobileNav: "unhidden"}
+    )
+  };
 
 
-  return (
+    render() {
+        return (
     <nav>
-      <div className="hamburger-menu" >
+      <div className="hamburger-menu" onClick={this.handleMobileNav}>
         <div></div>
         <div></div>
         <div></div>
       </div>
       <img className="nav-logo" src="/logo2.jpg"></img>
-      <div className="nav-items hidden">
+      <div className={`nav-items ` + this.state.mobileNav}>
         <ul>
           <li
-            onMouseEnter={handleOver}
-            onMouseOut={handleLeave}
-            onClick={handleClick}
+            onMouseEnter={this.handleOver}
+            onMouseOut={this.handleLeave}
+            onClick={this.handleClick}
           >
             <a href="#">
               <FontAwesome name="ticket" />
@@ -64,9 +76,9 @@ function navBar(props) {
             </ul>
           </li>
           <li
-            onMouseEnter={handleOver}
-            onMouseOut={handleLeave}
-            onClick={handleClick}
+            onMouseEnter={this.handleOver}
+            onMouseOut={this.handleLeave}
+            onClick={this.handleClick}
           >
             <a href="#">
               {" "}
@@ -127,6 +139,7 @@ function navBar(props) {
       </div>
     </nav>
   );
+    }
 }
 
-export default navBar;
+export default NavBarComponent

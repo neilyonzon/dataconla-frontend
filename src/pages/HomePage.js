@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../navbar/navbar";
 import Headline from "../components/Headliner";
 import Stats from "../components/Stats";
 import CTABox from "../components/CTABox";
@@ -10,9 +9,6 @@ import Countdown from "../components/Countdown";
 function HomePage() {
   return (
     <div>
-      <header>
-        <NavBar></NavBar>
-      </header>
       <BannerHP
         data={{
           image: "/Los_Angeles.png",
